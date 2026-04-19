@@ -6,6 +6,34 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import { ArrowLeft, Minus, Plus, ShoppingCart, Trash2 } from "lucide-react";
 import { motion } from "motion/react";
 
+const FALLBACK_GRADIENTS = [
+  "from-rose-400 to-orange-300",
+  "from-violet-400 to-indigo-300",
+  "from-emerald-400 to-teal-300",
+  "from-amber-400 to-yellow-300",
+  "from-sky-400 to-blue-300",
+  "from-fuchsia-400 to-pink-300",
+];
+
+function handleImgError(
+  e: React.SyntheticEvent<HTMLImageElement>,
+  name: string,
+  id: bigint,
+) {
+  const target = e.currentTarget;
+  target.style.display = "none";
+  const parent = target.parentElement;
+  if (!parent || parent.querySelector(".img-fallback")) return;
+  const gradient = FALLBACK_GRADIENTS[Number(id) % FALLBACK_GRADIENTS.length];
+  const fallback = document.createElement("div");
+  fallback.className = `img-fallback w-20 h-20 rounded-md flex flex-col items-center justify-center bg-gradient-to-br ${gradient} text-white select-none shrink-0`;
+  const letter = document.createElement("span");
+  letter.className = "text-2xl font-bold opacity-90";
+  letter.textContent = name.charAt(0).toUpperCase();
+  fallback.appendChild(letter);
+  parent.appendChild(fallback);
+}
+
 export default function CartPage() {
   const navigate = useNavigate();
   const { items, removeItem, updateQuantity, totalItems, totalPrice } =
@@ -71,6 +99,9 @@ export default function CartPage() {
                     src={item.imageUrl}
                     alt={item.name}
                     className="w-20 h-20 object-cover rounded-md bg-secondary shrink-0"
+                    onError={(e) =>
+                      handleImgError(e, item.name, item.productId)
+                    }
                   />
                 </Link>
                 <div className="flex-1 min-w-0">

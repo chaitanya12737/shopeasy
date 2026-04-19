@@ -16,6 +16,38 @@ import {
 import { motion } from "motion/react";
 import { toast } from "sonner";
 
+const FALLBACK_GRADIENTS = [
+  "from-rose-400 to-orange-300",
+  "from-violet-400 to-indigo-300",
+  "from-emerald-400 to-teal-300",
+  "from-amber-400 to-yellow-300",
+  "from-sky-400 to-blue-300",
+  "from-fuchsia-400 to-pink-300",
+];
+
+function handleImgError(
+  e: React.SyntheticEvent<HTMLImageElement>,
+  name: string,
+  id: bigint,
+) {
+  const target = e.currentTarget;
+  target.style.display = "none";
+  const parent = target.parentElement;
+  if (!parent || parent.querySelector(".img-fallback")) return;
+  const gradient = FALLBACK_GRADIENTS[Number(id) % FALLBACK_GRADIENTS.length];
+  const fallback = document.createElement("div");
+  fallback.className = `img-fallback w-full h-full flex flex-col items-center justify-center bg-gradient-to-br ${gradient} text-white select-none`;
+  const letter = document.createElement("span");
+  letter.className = "text-7xl font-bold opacity-90";
+  letter.textContent = name.charAt(0).toUpperCase();
+  const label = document.createElement("span");
+  label.className = "text-sm font-medium opacity-75 mt-2 px-4 text-center";
+  label.textContent = name;
+  fallback.appendChild(letter);
+  fallback.appendChild(label);
+  parent.appendChild(fallback);
+}
+
 export default function ProductDetailPage() {
   const { id } = useParams({ from: "/product/$id" });
   const productId = BigInt(id);
@@ -107,6 +139,7 @@ export default function ProductDetailPage() {
               src={product.imageUrl}
               alt={product.name}
               className="w-full h-full object-cover"
+              onError={(e) => handleImgError(e, product.name, product.id)}
             />
             {isLowStock && (
               <Badge className="absolute top-4 right-4 bg-destructive text-destructive-foreground border-0">

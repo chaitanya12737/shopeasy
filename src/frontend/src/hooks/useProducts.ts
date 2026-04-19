@@ -10,7 +10,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Mandarin collar bandhgala in premium cotton-silk blend. Ideal for festivals and family functions. Available in ivory and charcoal.",
     imageUrl:
-      "https://images.pexels.com/photos/15568861/pexels-photo-15568861.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1564859228273-274232fdb516?w=600&h=600&fit=crop&auto=format",
     category: "Men's Kurta",
     gender: "men",
     stock: BigInt(30),
@@ -22,7 +22,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Delicate chikankari embroidery on soft cotton. Paired with matching straight-fit pyjama. Relaxed festive elegance.",
     imageUrl:
-      "https://images.pexels.com/photos/29041818/pexels-photo-29041818.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1570655652364-2e0a67455ac6?w=600&h=600&fit=crop&auto=format",
     category: "Men's Kurta",
     gender: "men",
     stock: BigInt(25),
@@ -34,7 +34,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Breathable linen weave with side-slit kurta and salwar. Perfect for summer weddings and outdoor ceremonies.",
     imageUrl:
-      "https://images.pexels.com/photos/6311652/pexels-photo-6311652.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=600&fit=crop&auto=format",
     category: "Men's Kurta",
     gender: "men",
     stock: BigInt(40),
@@ -46,7 +46,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Jacquard woven sherwani with gold zari border. Comes with churidar and dupatta. The complete groom ensemble.",
     imageUrl:
-      "https://images.pexels.com/photos/7015034/pexels-photo-7015034.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1583391733981-8498428e1c64?w=600&h=600&fit=crop&auto=format",
     category: "Men's Sherwani",
     gender: "men",
     stock: BigInt(12),
@@ -58,7 +58,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Pure silk sherwani with hand-stitched floral motifs. Lightweight and regal — a modern groom's favourite.",
     imageUrl:
-      "https://images.pexels.com/photos/5384423/pexels-photo-5384423.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=600&fit=crop&auto=format",
     category: "Men's Sherwani",
     gender: "men",
     stock: BigInt(8),
@@ -70,7 +70,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "100% Egyptian cotton, slim-fit cut. Button-down collar and chest pocket. Wrinkle-resistant finish for busy days.",
     imageUrl:
-      "https://images.pexels.com/photos/297933/pexels-photo-297933.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600&h=600&fit=crop&auto=format",
     category: "Men's Shirts",
     gender: "men",
     stock: BigInt(50),
@@ -82,7 +82,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Airy linen-cotton blend in a relaxed half-sleeve cut. Camp collar and chest button loop — weekend-ready.",
     imageUrl:
-      "https://images.pexels.com/photos/1192609/pexels-photo-1192609.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&h=600&fit=crop&auto=format",
     category: "Men's Shirts",
     gender: "men",
     stock: BigInt(45),
@@ -94,7 +94,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Stretch cotton twill for all-day comfort. Mid-rise waistband with belt loops. Available in navy, olive, and beige.",
     imageUrl:
-      "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&h=600&fit=crop&auto=format",
     category: "Men's Trousers",
     gender: "men",
     stock: BigInt(35),
@@ -106,7 +106,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Fine wool-blend fabric with a pressed crease. Side pockets and hook-and-bar closure. Sharp office staple.",
     imageUrl:
-      "https://images.pexels.com/photos/2897531/pexels-photo-2897531.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1594938298603-c8148c4b4898?w=600&h=600&fit=crop&auto=format",
     category: "Men's Trousers",
     gender: "men",
     stock: BigInt(28),
@@ -118,7 +118,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Block-print cotton waistcoat with brass buttons. Layer over a kurta or plain shirt for instant festive flair.",
     imageUrl:
-      "https://images.pexels.com/photos/8839882/pexels-photo-8839882.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=600&h=600&fit=crop&auto=format",
     category: "Men's Ethnic",
     gender: "men",
     stock: BigInt(20),
@@ -130,7 +130,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Classic jodhpuri bandhgala jacket with matching trousers. Rich brocade fabric — head-turning at any wedding.",
     imageUrl:
-      "https://images.pexels.com/photos/7345174/pexels-photo-7345174.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1610177498573-78deaa4a797b?w=600&h=600&fit=crop&auto=format",
     category: "Men's Ethnic",
     gender: "men",
     stock: BigInt(15),
@@ -142,7 +142,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Traditional dhoti pre-stitched for ease of wear paired with a pintuck kurta. Festive occasion essential.",
     imageUrl:
-      "https://images.pexels.com/photos/3622608/pexels-photo-3622608.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=600&fit=crop&auto=format",
     category: "Men's Ethnic",
     gender: "men",
     stock: BigInt(22),
@@ -156,7 +156,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Authentic Kanjivaram with heavy gold zari border and pallu. Pure mulberry silk — a timeless bridal heirloom.",
     imageUrl:
-      "https://images.pexels.com/photos/29026115/pexels-photo-29026115.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1610189188137-0f0e32e72a3c?w=600&h=600&fit=crop&auto=format",
     category: "Women's Sarees",
     gender: "women",
     stock: BigInt(10),
@@ -168,7 +168,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Opulent Banarasi weave with floral buti motifs and wide brocade border. Ideal for weddings and receptions.",
     imageUrl:
-      "https://images.pexels.com/photos/30703877/pexels-photo-30703877.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1583391465792-c58b03da07a1?w=600&h=600&fit=crop&auto=format",
     category: "Women's Sarees",
     gender: "women",
     stock: BigInt(8),
@@ -180,7 +180,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Lightweight georgette with vibrant floral digital print. Easy to drape and comfortable for long events.",
     imageUrl:
-      "https://images.pexels.com/photos/2995309/pexels-photo-2995309.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1536566482680-fca31930a0bd?w=600&h=600&fit=crop&auto=format",
     category: "Women's Sarees",
     gender: "women",
     stock: BigInt(30),
@@ -192,7 +192,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Soft Bengal cotton handloom with traditional checks and woven border. Cool, casual, and eco-conscious.",
     imageUrl:
-      "https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600&h=600&fit=crop&auto=format",
     category: "Women's Sarees",
     gender: "women",
     stock: BigInt(40),
@@ -204,7 +204,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Delicate chiffon base with hand-embroidered sequin work pallu. Drapes beautifully for cocktail parties.",
     imageUrl:
-      "https://images.pexels.com/photos/6766081/pexels-photo-6766081.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=600&fit=crop&auto=format",
     category: "Women's Sarees",
     gender: "women",
     stock: BigInt(18),
@@ -216,7 +216,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Full-flare bridal lehenga with heavy hand-embroidery, matching choli and dupatta. Ready-to-wear couture.",
     imageUrl:
-      "https://images.pexels.com/photos/3622614/pexels-photo-3622614.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1591392523843-3e51d78e3cb5?w=600&h=600&fit=crop&auto=format",
     category: "Women's Lehenga",
     gender: "women",
     stock: BigInt(6),
@@ -228,7 +228,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Pastel floral print on soft crepe with embellished waistband. Perfect for sangeet and mehendi ceremonies.",
     imageUrl:
-      "https://images.pexels.com/photos/8839895/pexels-photo-8839895.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1609234590689-ca9a69dd7a3c?w=600&h=600&fit=crop&auto=format",
     category: "Women's Lehenga",
     gender: "women",
     stock: BigInt(20),
@@ -240,7 +240,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Flowing anarkali frock with mirror-work yoke and flared skirt. Stunning at family gatherings and Eid parties.",
     imageUrl:
-      "https://images.pexels.com/photos/6311387/pexels-photo-6311387.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1583391464867-7a6a4b53bbc1?w=600&h=600&fit=crop&auto=format",
     category: "Women's Dresses",
     gender: "women",
     stock: BigInt(22),
@@ -252,7 +252,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Tiered chiffon maxi in jewel tones. V-neckline and cinched waist for a flattering silhouette.",
     imageUrl:
-      "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1572453800999-e8d68d0acea9?w=600&h=600&fit=crop&auto=format",
     category: "Women's Dresses",
     gender: "women",
     stock: BigInt(28),
@@ -264,7 +264,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Phulkari embroidery on soft cotton kameez with wide palazzo. A Punjab-inspired kurta set for festive days.",
     imageUrl:
-      "https://images.pexels.com/photos/9218524/pexels-photo-9218524.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=600&h=600&fit=crop&auto=format",
     category: "Women's Kurta Set",
     gender: "women",
     stock: BigInt(32),
@@ -276,7 +276,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Hand tie-dye cotton kurti with matching palazzo pants. Vivid shibori patterns — casual and expressive.",
     imageUrl:
-      "https://images.pexels.com/photos/7319307/pexels-photo-7319307.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1617715870124-0aa1f33c2cbf?w=600&h=600&fit=crop&auto=format",
     category: "Women's Kurta Set",
     gender: "women",
     stock: BigInt(36),
@@ -288,7 +288,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description:
       "Sheer Chanderi silk-cotton blend with golden bootis woven in. Lightweight and breathable — perfect for summer weddings.",
     imageUrl:
-      "https://images.pexels.com/photos/4946601/pexels-photo-4946601.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1614183517584-c68a1d6e0e8c?w=600&h=600&fit=crop&auto=format",
     category: "Women's Sarees",
     gender: "women",
     stock: BigInt(14),

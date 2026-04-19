@@ -11,6 +11,44 @@ interface ProductCardProps {
   product: Product;
 }
 
+// Gradient palette for image fallback — cycles by product id
+const FALLBACK_GRADIENTS = [
+  "from-rose-400 to-orange-300",
+  "from-violet-400 to-indigo-300",
+  "from-emerald-400 to-teal-300",
+  "from-amber-400 to-yellow-300",
+  "from-sky-400 to-blue-300",
+  "from-fuchsia-400 to-pink-300",
+];
+
+function getGradient(id: bigint) {
+  return FALLBACK_GRADIENTS[Number(id) % FALLBACK_GRADIENTS.length];
+}
+
+function handleImgError(
+  e: React.SyntheticEvent<HTMLImageElement>,
+  name: string,
+  id: bigint,
+) {
+  const target = e.currentTarget;
+  target.style.display = "none";
+  const parent = target.parentElement;
+  if (!parent) return;
+  // Avoid duplicate fallback
+  if (parent.querySelector(".img-fallback")) return;
+  const fallback = document.createElement("div");
+  fallback.className = `img-fallback w-full h-full flex flex-col items-center justify-center bg-gradient-to-br ${getGradient(id)} text-white select-none`;
+  const letter = document.createElement("span");
+  letter.className = "text-5xl font-bold opacity-90";
+  letter.textContent = name.charAt(0).toUpperCase();
+  const label = document.createElement("span");
+  label.className = "text-xs font-medium opacity-75 mt-1 px-2 text-center";
+  label.textContent = name;
+  fallback.appendChild(letter);
+  fallback.appendChild(label);
+  parent.appendChild(fallback);
+}
+
 export default function ProductCard({ product }: ProductCardProps) {
   const addItem = useCart((s) => s.addItem);
 
@@ -47,6 +85,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             alt={product.name}
             className="w-full h-full object-cover transition-smooth group-hover:scale-105"
             loading="lazy"
+            onError={(e) => handleImgError(e, product.name, product.id)}
           />
           {isOutOfStock && (
             <div className="absolute inset-0 bg-background/70 flex items-center justify-center">
