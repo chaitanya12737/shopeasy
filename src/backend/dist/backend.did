@@ -1,0 +1,79 @@
+type Timestamp = int;
+type ShippingAddress = 
+ record {
+   city: text;
+   country: text;
+   fullName: text;
+   state: text;
+   street: text;
+   zipCode: text;
+ };
+type SessionId = text;
+type ProductId = nat;
+type Product = 
+ record {
+   category: text;
+   description: text;
+   id: ProductId;
+   imageUrl: text;
+   name: text;
+   price: nat;
+   stock: nat;
+ };
+type OrderStatus = 
+ variant {
+   cancelled;
+   confirmed;
+   delivered;
+   pending;
+   shipped;
+ };
+type OrderItem = 
+ record {
+   name: text;
+   price: nat;
+   productId: ProductId;
+   quantity: nat;
+ };
+type OrderId = nat;
+type Order = 
+ record {
+   createdAt: Timestamp;
+   id: OrderId;
+   items: vec OrderItem;
+   orderNumber: text;
+   shippingAddress: ShippingAddress;
+   status: OrderStatus;
+   totalPrice: nat;
+ };
+type CartSummary = 
+ record {
+   items: vec CartItem;
+   totalItems: nat;
+   totalPrice: nat;
+ };
+type CartItem = 
+ record {
+   imageUrl: text;
+   name: text;
+   price: nat;
+   productId: ProductId;
+   quantity: nat;
+ };
+service : {
+  addProduct: (name: text, price: nat, description: text, imageUrl: text,
+   category: text, stock: nat) -> (Product);
+  addToCart: (sessionId: SessionId, productId: ProductId, quantity: nat) ->
+   (bool);
+  clearCart: (sessionId: SessionId) -> ();
+  createOrder: (sessionId: SessionId, shippingAddress: ShippingAddress) ->
+   (opt Order);
+  getCart: (sessionId: SessionId) -> (CartSummary) query;
+  getOrder: (id: OrderId) -> (opt Order) query;
+  getProduct: (id: ProductId) -> (opt Product) query;
+  listProducts: (searchTerm: opt text, category: opt text) ->
+   (vec Product) query;
+  removeFromCart: (sessionId: SessionId, productId: ProductId) -> (bool);
+  updateCartItem: (sessionId: SessionId, productId: ProductId, quantity:
+   nat) -> (bool);
+}

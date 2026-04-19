@@ -1,0 +1,99 @@
+// Version: 1.0.0
+type CartItem__1044444615 =
+  {
+    imageUrl : Text;
+    name : Text;
+    price : Nat;
+    productId : ProductId__593108714;
+    quantity : Nat
+  };
+type CartItem__297018664 = CartItem__1044444615;
+type Cart__839558991 = List__415060402<CartItem__297018664>;
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type List__415060402<T> = List__790383201<T>;
+type List__790383201<T> =
+  {
+    var blockIndex : Nat__490723111;
+    var blocks : [var [var ?T]];
+    var elementIndex : Nat__490723111
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type OrderId__197865225 = Nat;
+type OrderId__521176343 = OrderId__197865225;
+type OrderItem__241319351 =
+  {
+    name : Text;
+    price : Nat;
+    productId : ProductId__903190681;
+    quantity : Nat
+  };
+type OrderStatus__272730104 =
+  {#cancelled; #confirmed; #delivered; #pending; #shipped};
+type Order__141779993 =
+  {
+    createdAt : Timestamp__813860109;
+    id : OrderId__521176343;
+    items : [OrderItem__241319351];
+    orderNumber : Text;
+    shippingAddress : ShippingAddress__910423011;
+    status : OrderStatus__272730104;
+    totalPrice : Nat
+  };
+type Order__645163560 = Order__141779993;
+type ProductId__160010635 = Nat;
+type ProductId__324763372 = ProductId__160010635;
+type ProductId__593108714 = ProductId__160010635;
+type ProductId__903190681 = ProductId__160010635;
+type Product__389207432 =
+  {
+    category : Text;
+    description : Text;
+    id : ProductId__324763372;
+    imageUrl : Text;
+    name : Text;
+    price : Nat;
+    stock : Nat
+  };
+type Product__45918276 = Product__389207432;
+type SessionId__1052913375 = Text;
+type SessionId__533830871 = SessionId__958397758;
+type SessionId__958397758 = SessionId__1052913375;
+type ShippingAddress__910423011 =
+  {
+    city : Text;
+    country : Text;
+    fullName : Text;
+    state : Text;
+    street : Text;
+    zipCode : Text
+  };
+type Timestamp__301639476 = Int;
+type Timestamp__813860109 = Timestamp__301639476;
+actor {
+  stable carts :
+    {
+      var root : Node__46230540<SessionId__533830871, Cart__839558991>;
+      var size : Nat__490723111
+    };
+  stable var nextOrderId : Nat;
+  stable var nextProductId : Nat;
+  stable orders :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Order__645163560]];
+      var elementIndex : Nat__490723111
+    };
+  stable products :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Product__45918276]];
+      var elementIndex : Nat__490723111
+    }
+};

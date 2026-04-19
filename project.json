@@ -1,0 +1,22 @@
+{
+  "overview": "A full-featured online shopping website with product catalog, real-time search, shopping cart, and Stripe-powered checkout.",
+  "features": [
+    "Product catalog with images, names, and prices",
+    "Real-time product search and sorting",
+    "Add to cart with quantity management",
+    "Persistent shopping cart across page refreshes",
+    "Checkout form with shipping address collection",
+    "Stripe payment integration",
+    "Order confirmation page"
+  ],
+  "category": "ecommerce",
+  "tags": [
+    "shopping",
+    "ecommerce",
+    "cart",
+    "stripe",
+    "payments",
+    "products"
+  ],
+  "last_updated": "2026-04-13T17:02:08.733Z"
+}
